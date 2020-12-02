@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+{% block titulo %}Galeria{% endblock %}
+{% load static %}
+{% block contenido %}
+<br><br>
+<h2>Galeria de nuestros servicios</h2>
+<div class="galeria">
+    {% for g in galeria %}
+        {% if g.imagen %}
+            <a data-fancybox="gallery" href="{{ g.imagen.url }}"> <img src="{{ g.imagen.url }}"></a>
+        {% else %}
+            <a data-fancybox="gallery" href="img/galeria/1.jpeg"><img src="img/galeria/1.jpeg"></a>
+            <a data-fancybox="gallery" href="img/galeria/2.jpeg"><img src="img/galeria/2.jpeg"></a>
+            <a data-fancybox="gallery" href="img/galeria/3.jpg"><img src="img/galeria/3.jpg"></a>
+            <a data-fancybox="gallery" href="img/galeria/4.jpg"><img src="img/galeria/4.jpg"></a>
+            <a data-fancybox="gallery" href="img/galeria/5.jpg"><img src="img/galeria/5.jpg"></a>
+            <a data-fancybox="gallery" href="img/galeria/6.jpg"><img src="img/galeria/6.jpg"></a>
+            <a data-fancybox="gallery" href="img/galeria/7.jpg"><img src="img/galeria/7.jpg"></a>
+            <a data-fancybox="gallery" href="img/galeria/8.jpg"><img src="img/galeria/8.jpg"></a>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+

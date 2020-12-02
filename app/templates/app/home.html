@@ -1,0 +1,88 @@
+{% extends 'app/base.html' %}
+
+{% block titulo %}Inicio{% endblock %}
+
+{% load static%}
+
+{% block contenido %}
+<div class= "slider">
+    <!-- preguntar -->
+    {% for caro in carrucel %}
+        {% if caro.imagen %}
+        <div> 
+            <img src="{{ caro.imagen.url }}">
+        </div> 
+        {% else %}
+        <div>
+            <img src="img/banner/banner1.jpeg" alt="">
+        </div>
+        <div>
+            <img src="img/banner/banner2.jpeg" alt="">
+        </div>
+        <div>
+            <img src="img/banner/banner3.jpeg" alt="">
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<div class= "servicios">
+   
+
+    <div class= "servicio">
+        
+        <div class= "contenedor_servicio">
+
+            <div class="detalle" >
+                
+                <h2> Categoría Servicios</h3>
+                <br>
+                <h3>-Lavado Estándar</h3>
+                <h3>-Lavado Premium</h3>
+                <h3>-Interior Plus</h3>
+                <h3>-Micropulido Plus</h3>
+                <h3>-Sanitización</h3>
+                <h3>-Desinfección</h3>
+                <h3>-Encerado</h3>
+                <br>
+            </div>
+            
+        </div>
+        
+        <div class="servicioPrestado">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'app/img/cliente1.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Clientes Satisfechos</h5>
+                  <p class="card-text">El servicio entregado por la empresa a sido uno de los mejores, ya que todo el personal tiene buen conocimiento de todo el proceso que se lleva a cabo y se dan el tiempo de informarnos de buena manera lo que le haran a nuestro vehiculo</p>
+                </div>
+            </div>
+            
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'app/img/cliente2.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Clientes Satisfechos</h5>
+                  <p class="card-text">La empresa tiene un exelente servicio y superó todas mis espectativas al momento de recibir mi vehiculo, ya que quedo mucho mejor de lo que imaginaba, en su interior se encontraba con una exelente limpieza, lo cual no lo entregan todos los autolavados, respecto al personal, son todos muy educados y respetuosos al momento de atendernos</p>
+                </div>
+            </div>
+
+        </div>
+       
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slider').bxSlider({
+            mode: 'fade', 
+            auto: true,
+            pause: 2000
+        });
+    });
+</script>
+{% endblock %}

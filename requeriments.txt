@@ -1,0 +1,5 @@
+paquetes intalados (para instalar = pip install [NombreDelPaquete])
+-django
+-pillow
+-django-crispy-forms
+-django-admin-interface

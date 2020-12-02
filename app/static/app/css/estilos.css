@@ -1,0 +1,262 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.servicioPrestado {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.galeria img{
+    border-radius: 10%;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+#contenido {
+    width: 80%;
+    margin: auto;
+    max-width: 1280px;
+    min-height: 80vh;
+}
+
+.servicios{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+}
+
+.servicio{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.servicio > .card {
+    margin: auto;
+}
+
+.detalle{
+    text-align: center ;
+    color: #060003; 
+}
+
+.contenedor_servicio {
+    background-color: #CBECE4;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    shape-margin: 100%;
+    border-radius: 5%
+}
+
+.contenedor_servicio > ul > li {
+    padding:5%;
+    margin-left: 10%;
+}
+
+.ContenedorInfo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mapa > iframe{
+    width: 400;
+    height: 550px;
+    object-fit: contain;
+    align-content: space-around;
+    border-radius: 5%
+}
+
+
+footer {    
+    width: 100%;
+    height: 250px;
+    margin-top: 3%;
+}
+
+.MenuFooter > ul > li > a {
+    color:#FFFFFF;
+    text-decoration:none;
+}
+
+.MenuFooter > ul > li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.ContenedorFooter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ContenedorFooter > img {
+    width: 200px;
+    height: 100px;
+}
+
+.menu {
+    width: 40px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display:none;
+}
+
+.detalle {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5%;
+}
+
+/* tablet */
+@media ( max-width: 1024px ) {
+
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @keyframes animacion_producto_tablet {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .servicios{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+ 
+    .servicio {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contenedor_servicio{
+        width: 350px;
+    }
+
+    .servicioPrestado {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5%;
+        justify-content: center;
+    }
+
+    .servicioPrestado .card {
+        margin: 5%;
+    }
+    
+    .contenedor_servicio {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .ContenedorInfo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer > div {
+        width: 50%;
+    }
+
+    .mapa > iframe{
+        width: 100%;
+        justify-content: center;
+    }
+    
+
+}
+/* smarphone */
+@media (max-width: 480px) {
+ 
+    footer{
+        width: 100%;
+        height: 100%;
+    }
+
+    .ContenedorFooter > img {
+        width: 150px;
+        margin-left: 35%;
+    }
+
+    .MenuFooter{
+        visibility: hidden;
+    }
+    
+    header >{
+        width: 100%;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+    
+    @keyframes animacion_producto_mobile {
+        0%{
+            transform: scale(0.1);
+        }
+
+        80%{
+            transform: scale(1.1);
+        }
+
+        100%{
+            transform: scale(1);
+        }
+        
+    }
+    
+    .ContenedorInfo {
+        width: 100%;
+    }
+
+    .contenedor_servicio > ul > li > h3 {
+        font-size: 15px;
+    }
+
+    .servicio{
+        animation: animacion_producto_mobile 0.8s;
+        display: flex;
+        justify-content: start;
+    }
+   
+}
+
+
+
+ 

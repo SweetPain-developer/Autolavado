@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+{% block titulo %}Ubicacion{% endblock %}
+{% load static %}
+{% block contenido %}
+<br>
+<h2>Ubicanos Aquí</h2>
+
+<div class="ContenedorInfo">
+    <div class= "contenedor_servicio">
+        <ul>
+            <li><h3>Correo: Info@carwash.cl</h3></li>
+            <li><h3>Telefono: +56(2) 2761 6041</h3></li>
+            <li><h3>Dirección: Av. Kennedy 5670, Vitacura.</h3></li>
+            <li><h3>Horario: Lunes a Virnes Incluye festivos</h3></li>
+            <li><h3>Hora de atención: 08:00 am a 19:00 pm </h3></li>
+        </ul>
+    </div>
+
+    <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26646.926499798832!2d-70.56816260033057!3d-33.400664880386444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf28373c7ab3%3A0x88fe95ad126b1887!2sFlash%20Wash!5e0!3m2!1ses!2scl!4v1600994572465!5m2!1ses!2scl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+</div>
+{% endblock %}

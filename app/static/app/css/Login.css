@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+body {
+    display: flex;
+    background-color: rgb(17, 114, 114);
+    height: 900px;
+    align-items: center;
+}
+
+.row {
+    justify-content: center;
+}
+
